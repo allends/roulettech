@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  server:
+    build: ./server
+    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./server:/code
+      - ./server/static:/code/static
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=0
+      - STATIC_ROOT=./code/static
+    env_file:
+      - .env
+
+  app:
+    build: ./app
+    volumes:
+      - ./app/src:/app/src
+      - ./app/public:/app/public
+      - ./app/package.json:/app/package.json
+    ports:
+      - "5173:5173"
+    depends_on:
+      - server
+
