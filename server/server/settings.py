@@ -33,7 +33,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 ALLOWED_HOSTS = []
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+    ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '45.79.128.201']
 
 # Application definition
 
