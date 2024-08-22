@@ -121,7 +121,7 @@ export const useRecipes = () => {
 			return
 		}
 		fetchRecipes().then((recipes) => {
-			if (!abort) {
+			if (!abort && !!recipes) {
 				setRecipes(recipes)
 			}
 		})
