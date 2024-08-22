@@ -47,7 +47,7 @@ export const useRecipeBooks = () => {
 	const [recipeBooks, setRecipeBooks] = useState<RecipeBook[]>([])
 
 	useEffect(() => {
-		fetch('http://45.79.128.201:5173/api/recipebook/list', {
+		fetch('http://45.79.128.201:8000/api/recipebook/list', {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json; charset=utf-8',

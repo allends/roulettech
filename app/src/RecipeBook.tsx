@@ -12,7 +12,7 @@ export function RecipeCard(props: {
 	const removeRecipeFromRecipeBook = async () => {
 		try {
 			const result = await fetch(
-				`http://45.79.128.201:5173/api/recipebook/remove_recipe`,
+				`http://45.79.128.201:8000/api/recipebook/remove_recipe`,
 				{
 					method: 'POST',
 					body: JSON.stringify({
@@ -99,7 +99,7 @@ export default function RecipeBook() {
 
 		try {
 			const result = await fetch(
-				`http://45.79.128.201:5173/api/recipebook/delete`,
+				`http://45.79.128.201:8000/api/recipebook/delete`,
 				{
 					method: 'POST',
 					body: JSON.stringify({
@@ -116,7 +116,7 @@ export default function RecipeBook() {
 	}
 
 	useEffect(() => {
-		fetch(`http://45.79.128.201:5173/api/recipebook?id=${id}`, {
+		fetch(`http://45.79.128.201:8000/api/recipebook?id=${id}`, {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json; charset=utf-8',

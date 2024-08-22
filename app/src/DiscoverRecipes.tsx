@@ -13,7 +13,7 @@ export function RecipeCard(props: { recipe: Recipe; recipeBooks?: RecipeBook[] }
 	const addRecipeToRecipeBook = async (recipeBookId: number, recipeId: number) => {
 		try {
 			const result = await fetch(
-				`http://45.79.128.201:5173/api/recipebook/add_recipe`,
+				`http://45.79.128.201:8000/api/recipebook/add_recipe`,
 				{
 					method: 'POST',
 					body: JSON.stringify({
@@ -97,7 +97,7 @@ export const useRecipes = () => {
 	const fetchRecipes = useCallback(async () => {
 		try {
 			const result = await fetch(
-				'http://45.79.128.201:5173/api/recipe/list',
+				'http://45.79.128.201:8000/api/recipe/list',
 				{
 					method: 'GET',
 					headers: {
