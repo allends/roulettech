@@ -30,7 +30,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['45.79.128.201']
 
 if not DEBUG:
     ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
