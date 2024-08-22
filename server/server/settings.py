@@ -30,10 +30,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-ALLOWED_HOSTS = ['45.79.128.201']
+ALLOWED_HOSTS = ['45.79.128.201', 'http://45.79.128.201:5173']
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
+    ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '45.79.128.201', 'http://45.79.128.201:5173']
 
 # Application definition
 
