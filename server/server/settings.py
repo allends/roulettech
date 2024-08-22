@@ -33,7 +33,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 ALLOWED_HOSTS = []
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '45.79.128.201']
+    ALLOWED_HOSTS = ['0.0.0.0', 'localhost']
 
 # Application definition
 
@@ -53,7 +53,7 @@ if DEBUG:
 CORS_ORIGIN_ALLOW_ALL = True
 
 MIDDLEWARE = [
-	# 'corsheaders.middleware.CorsMiddleware',
+	'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -137,6 +137,6 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_WHITELIST = [
-     'localhost',
-     '45.79.128.201'
+     'http://localhost:5173',
+     'http://45.79.128.201:5173'
 ]

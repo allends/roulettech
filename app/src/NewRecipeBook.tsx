@@ -25,7 +25,7 @@ export default function NewRecipeBook() {
 						return
 					}
 
-					fetch('http://localhost:8000/api/recipebook/create', {
+					fetch('http://45.79.128.201:5173/api/recipebook/create', {
 						method: 'POST',
 						headers: {
 							'Content-Type': 'application/json; charset=utf-8',
